@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ridhee Agritech – Pure. Natural. Consistent.</title>
+   <link rel="icon" type="image/png" href="product_images/ridhee_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMobile()">Home</a>
+  <a href="about.html" onclick="closeMobile()">About</a>
+  <a href="products.html" onclick="closeMobile()">Products</a>
+  <a href="certifications.html" onclick="closeMobile()">Certifications</a>
+  <a href="feedback.html" onclick="closeMobile()">Feedback</a>
+  <a href="contact.html" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+<div class="nav-logo-icon">
+<img src="product_images/ridhee_logo2.png" alt="Ridhee Agritech Logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+</div>
+    <div>
+      <span class="nav-logo-text">Ridhee Agritech</span>
+      <span class="nav-logo-sub">Agro Food Processing</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-page="index.html">Home</a></li>
+    <li><a href="about.html" data-page="about.html">About</a></li>
+    <li><a href="products.html" data-page="products.html">Products</a></li>
+    <li><a href="certifications.html" data-page="certifications.html">Certifications</a></li>
+    <li><a href="feedback.html" data-page="feedback.html">Feedback</a></li>
+    <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="contact.html">Get Quote</a>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ══════════════ -->
+<div id="home-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge animate-fadeup"> Pure · Natural · Consistent </div>
+      <h1 class="hero-title animate-fadeup delay-1">
+        Nature's Best,<br><em>Preserved</em><br>for the World
+      </h1>
+      <p class="hero-sub animate-fadeup delay-2">Premium dehydrated fruits, vegetables & herbs — crafted at Anjar-Kachchh with zero preservatives and export-grade quality standards.</p>
+      <div class="hero-btns animate-fadeup delay-3">
+        <a class="btn-primary" href="products.html">Explore Products</a>
+        <a class="btn-outline" href="contact.html">Request Sample</a>
+      </div>
+      <div class="hero-stats animate-fadeup delay-4">
+        <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Products</div></div>
+        <div class="stat"><div class="stat-num">0</div><div class="stat-label">Preservatives</div></div>
+        <div class="stat"><div class="stat-num">FSSAI</div><div class="stat-label">Licensed</div></div>
+        <div class="stat"><div class="stat-num">304</div><div class="stat-label">SS Grade</div></div>
+      </div>
+    </div>
+    <div class="hero-visual animate-fadeup delay-2">
+      <!--
+        IMAGES: Replace the src below with your actual image paths.
+        Example: src="images/mixed_veggies.jpeg"
+        Recommended size: 500×260px minimum, landscape format.
+      -->
+      <div class="hero-card">
+        <img class="hero-card-img" src="product_images/IMG_1331.JPG" alt="Dehydrated Vegetables">
+        <div class="hero-card-body">
+          <h4>Dehydrated Vegetables</h4>
+          <p>Onion, Garlic, Tomato, Beetroot & more — multiple cuts & grades</p>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img class="hero-card-img" src="product_images/IMG_1332.JPG" alt="Dehydrated Fruits">
+        <div class="hero-card-body">
+          <h4>Dehydrated Fruits</h4>
+          <p>Mango, Amla, Pineapple, Guava — slices, powder & more</p>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img class="hero-card-img" src="product_images/IMG_1338.JPG" alt="Herbs and Spice Powders">
+        <div class="hero-card-body">
+          <h4>Herbs & Spice Powders</h4>
+          <p>Ginger, Fenugreek, Spinach — pure & natural blends</p>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img class="hero-card-img" src="product_images/bulk_oem.png" alt="Bulk OEM Supply">
+        <div class="hero-card-body">
+          <h4>Bulk & OEM Supply</h4>
+          <p>200g to 25kg packs, private label & export-ready packaging</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+
+<!-- Feature Strip -->
+<div class="feature-strip">
+  <div class="feature-item"><div class="feature-dot"></div>No Preservatives</div>
+  <div class="feature-item"><div class="feature-dot"></div>FSSAI Licensed</div>
+  <div class="feature-item"><div class="feature-dot"></div>GMP Compliant</div>
+  <div class="feature-item"><div class="feature-dot"></div>Export Ready</div>
+  <div class="feature-item"><div class="feature-dot"></div>Custom Grades & Mesh</div>
+</div>
+
+<!-- Products Preview -->
+<section>
+  <div class="section-label">Our Products</div>
+  <h2 class="section-title">From Farm to <em>Formulation</em></h2>
+  <div class="divider"></div>
+  <div class="products-grid">
+    <div class="product-card" onclick="location.href='products.html'">
+      <div class="product-card-img"><img src="product_images/PINK_ONION_POWDER.jpg" alt="Dehydrated Onion"></div>
+      <div class="product-card-body">
+        <h3>Dehydrated Onion</h3>
+        <p>Slices, flakes, chopped & powder form. Consistent pungency and colour.</p>
+        <span class="product-tag">Vegetable</span>
+      </div>
+    </div>
+    <div class="product-card" onclick="location.href='products.html'">
+      <div class="product-card-img"><img src="product_images/GARLIC_POWDER_(A).jpg" alt="Dehydrated Garlic"></div>
+      <div class="product-card-body">
+        <h3>Dehydrated Garlic</h3>
+        <p>Flakes, granules and powder — robust flavour, zero additives.</p>
+        <span class="product-tag">Vegetable</span>
+      </div>
+    </div>
+    <div class="product-card" onclick="location.href='products.html'">
+      <div class="product-card-img"><img src="product_images/MANGO_POWDER.jpg" alt="Mango Products"></div>
+      <div class="product-card-body">
+        <h3>Mango Products</h3>
+        <p>Dried slices, aampapad & powder from premium Kesar & Alphonso varieties.</p>
+        <span class="product-tag">Fruit</span>
+      </div>
+    </div>
+    <div class="product-card" onclick="location.href='products.html'">
+      <div class="product-card-img"><img src="product_images/beetroot_powder.png" alt="Beetroot"></div>
+      <div class="product-card-body">
+        <h3>Beetroot</h3>
+        <p>Vibrant slices and fine powder — ideal for nutraceuticals and food colouring.</p>
+        <span class="product-tag">Vegetable</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:40px">
+    <a class="btn-primary" href="products.html">View All Products</a>
+  </div>
+</section>
+
+<!-- Why Us -->
+<div class="why-us-section">
+  <section class="why-us-inner">
+    <div class="section-label">Why Ridhee Agritech</div>
+    <h2 class="section-title">Quality You Can <em>Trust</em></h2>
+    <div class="divider"></div>
+    <div class="why-us-grid">
+
+      <!-- Consistent Quality: shield + check -->
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+        </div>
+        <div class="why-card-body">
+          <h3>Consistent Quality</h3>
+          <p>QC with microbial &amp; pesticide testing.</p>
+        </div>
+      </div>
+
+      <!-- Competitive Pricing: tag -->
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+            <line x1="7" y1="7" x2="7.01" y2="7"/>
+          </svg>
+        </div>
+        <div class="why-card-body">
+          <h3>Competitive Pricing</h3>
+          <p>Direct factory pricing with transparent cost breakdowns for buyers.</p>
+        </div>
+      </div>
+
+      <!-- Custom Flexibility: sliders -->
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="21" x2="4" y2="14"/>
+            <line x1="4" y1="10" x2="4" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12" y2="3"/>
+            <line x1="20" y1="21" x2="20" y2="16"/>
+            <line x1="20" y1="12" x2="20" y2="3"/>
+            <line x1="1" y1="14" x2="7" y2="14"/>
+            <line x1="9" y1="8" x2="15" y2="8"/>
+            <line x1="17" y1="16" x2="23" y2="16"/>
+          </svg>
+        </div>
+        <div class="why-card-body">
+          <h3>Custom Flexibility</h3>
+          <p>Custom cuts, mesh sizes, grades, OEM and private-label options.</p>
+        </div>
+      </div>
+
+      <!-- Long-Term Partnership: handshake -->
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5z"/>
+            <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/>
+          </svg>
+        </div>
+        <div class="why-card-body">
+          <h3>Long-Term Partnership</h3>
+          <p>Transparent dealings and consistent supply for lasting relationships.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- CTA -->
+<section style="text-align:center">
+  <div class="section-label" style="text-align:center">Get Started</div>
+  <h2 class="section-title" style="text-align:center">Ready to Source <em>Premium</em> Ingredients?</h2>
+  <div class="divider" style="margin:24px auto"></div>
+  <p style="color:var(--text-light);font-size:15px;max-width:500px;margin:0 auto 36px;line-height:1.7">Contact us for pricing, samples or custom formulations. Our team is ready to serve domestic and global buyers.</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <a class="btn-primary" href="contact.html">Contact Us</a>
+    <a class="btn-outline" style="color:var(--green-deep);border-color:var(--green-deep)" href="feedback.html">Leave A Review</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">Ridhee Agritech</div>
+      <div class="logo-sub">Agro Food Processing & Dehydration Unit</div>
+      <p>Pure, natural, preservative-free dehydrated fruits, vegetables & herbs from Anjar-Kachchh, Gujarat. Export-ready since inception.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="products.html">Dehydrated Vegetables</a></li>
+        <li><a href="products.html">Dehydrated Fruits</a></li>
+        <li><a href="products.html">Herb Powders</a></li>
+        <li><a href="products.html">Custom Blends</a></li>
+        <li><a href="products.html">OEM / Private Label</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a>274-B, GIDC, Anjar</a></li>
+        <li><a>Kachchh – 370110</a></li>
+        <li><a href="tel:+918460042769">+91 8460042769</a></li>
+        <li><a href="mailto:ridheeagritech@zohomail.in">ridheeagritech@zohomail.in</a></li>
+      </ul>
+    </div>
+  </div>
+<div class="footer-bottom">
+    <span>© 2026 <span class="footer-gold">Ridhee Agritech</span>. All Rights Reserved.</span>
+    <span>By Karan Makani & Hiten Thacker</span>
+    <span>Developed by – Rishabh Thacker</span>
+</div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

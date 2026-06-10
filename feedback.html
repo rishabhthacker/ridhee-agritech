@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feedback – Ridhee Agritech</title>
+<link rel="icon" type="image/png" href="product_images/ridhee_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMobile()">Home</a>
+  <a href="about.html" onclick="closeMobile()">About</a>
+  <a href="products.html" onclick="closeMobile()">Products</a>
+  <a href="certifications.html" onclick="closeMobile()">Certifications</a>
+  <a href="feedback.html" onclick="closeMobile()">Feedback</a>
+  <a href="contact.html" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-icon">
+      <img src="product_images/ridhee_logo2.png" alt="Ridhee Agritech Logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+    </div>
+    <div>
+      <span class="nav-logo-text">Ridhee Agritech</span>
+      <span class="nav-logo-sub">Agro Food Processing</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-page="index.html">Home</a></li>
+    <li><a href="about.html" data-page="about.html">About</a></li>
+    <li><a href="products.html" data-page="products.html">Products</a></li>
+    <li><a href="certifications.html" data-page="certifications.html">Certifications</a></li>
+    <li><a href="feedback.html" data-page="feedback.html">Feedback</a></li>
+    <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="contact.html">Get Quote</a>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══════════════ FEEDBACK HERO ══════════════ -->
+<div class="feedback-hero">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="section-label">Share Your Experience</div>
+    <h1 class="section-title" style="color:var(--cream)">Leave a <em style="color:var(--gold-light)">Review</em></h1>
+    <p class="feedback-hero-sub" style="color:var(--cream)">Your feedback helps us improve and helps other buyers make informed decisions.</p>
+  </div>
+</div>
+
+<!-- ══════════════ FEEDBACK FORM ══════════════ -->
+<div class="feedback-form-section">
+  <div class="feedback-form-wrap">
+    <div id="feedbackFormWrap">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="fb_name" placeholder="e.g. Rajesh Kumar">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Company</label>
+          <input type="text" id="fb_company" placeholder="Company name">
+        </div>
+        <div class="form-group">
+          <label>Product Used</label>
+          <input type="text" id="fb_product" placeholder="e.g. Onion Powder">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Your Review</label>
+        <textarea id="fb_review" rows="5" placeholder="Tell us about your experience with our product and service…"></textarea>
+      </div>
+      <button class="feedback-submit" id="feedbackSubmitBtn" onclick="submitFeedback()">Submit Review</button>
+    </div>
+    <div id="feedbackSuccess" style="display:none;text-align:center;padding:60px 0">
+      <div style="font-size:3rem;margin-bottom:12px">🎉</div>
+      <h4 style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--green-deep)">Thank You!</h4>
+      <p style="color:var(--text-light);margin-top:8px">Your review has been received. We appreciate your feedback.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+async function submitFeedback() {
+  const ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'; // ← Paste your key from web3forms.com
+
+  const name    = document.getElementById('fb_name').value.trim();
+  const company = document.getElementById('fb_company').value.trim();
+  const product = document.getElementById('fb_product').value.trim();
+  const review  = document.getElementById('fb_review').value.trim();
+
+  if (!name || !review) {
+    alert('Please fill in your Name and Review.');
+    return;
+  }
+
+  const btn = document.getElementById('feedbackSubmitBtn');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  const body = {
+    access_key: ACCESS_KEY,
+    subject: `New Feedback from ${name}${company ? ' — ' + company : ''}`,
+    name: name,
+    company: company || '(not provided)',
+    product: product || '(not specified)',
+    review: review,
+    from_name: 'Ridhee Agritech Website'
+  };
+
+  try {
+    const res  = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    const data = await res.json();
+    if (data.success) {
+      document.getElementById('feedbackFormWrap').style.display = 'none';
+      document.getElementById('feedbackSuccess').style.display  = 'block';
+    } else {
+      alert('Something went wrong. Please try again or contact us directly.');
+      btn.textContent = 'Submit Review';
+      btn.disabled = false;
+    }
+  } catch (err) {
+    alert('Network error. Please try again.');
+    btn.textContent = 'Submit Review';
+    btn.disabled = false;
+  }
+}
+</script>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">Ridhee Agritech</div>
+      <div class="logo-sub">Agro Food Processing & Dehydration Unit</div>
+      <p>Pure, natural, preservative-free dehydrated produce from Gujarat.</p>
+    </div>
+    <div class="footer-col"><h4>Pages</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul>
+      <li><a>274-B, GIDC, Anjar-Kachchh</a></li>
+      <li><a href="tel:+918460042769">+91 8460042769</a></li>
+      <li><a href="mailto:ridheeagritech@zohomail.in">ridheeagritech@zohomail.in</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="contact.html">Get Quote</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 <span class="footer-gold">Ridhee Agritech</span>. All Rights Reserved.</span>
+    <span>Anjar-Kachchh, Gujarat</span>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
