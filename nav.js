@@ -78,7 +78,7 @@ function setRating(val) {
   });
 }
 
-// ─── Contact & Feedback forms are handled inline in contact.html and feedback.html ───
+// ─── Contact & Feedback forms are handled inline in their respective HTML files ───
 
 // ─── Auto-init Products Grid ───
 if (document.getElementById('productsGrid')) renderProducts('all');
